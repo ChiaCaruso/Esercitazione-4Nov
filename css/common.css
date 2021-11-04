@@ -1,0 +1,126 @@
+/* ---BASE--- */
+*{
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+img{
+    display: block;
+}
+
+body{
+    background: #f5f2ee;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px; 
+    color: #0e4d66;
+    line-height: 30px;
+}
+
+a{
+    color: #08719b;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 70px;
+}
+
+h3{
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.btn{
+    background: none;
+    color: #08719b;
+    padding: 10px;
+    text-align: center;
+    border: 2px #08719b solid;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background: #08719b;
+    color: #fff;
+    border: 2px #08719b solid;
+}
+
+/* ---HEADER--- */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px; 
+    background: #08719b;
+    color: #fff;
+    align-items: center;
+}
+
+/* ---FORM--- */
+
+.main{
+    align-items: center;
+    margin: 50px 80px;
+    height: 100vh;
+}
+
+form label{
+    display: block;
+}
+
+form input{
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.card{
+    margin: 20px 0;
+}
+
+.card ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+}
+
+.card ul li{
+    padding: 30px 20px;
+    border: 2px solid #0e4d66;
+    margin-bottom: 20px;
+}
+
+/* ---FOOTER--- */
+
+footer{
+    display: flex;
+    background: #08719b;
+    color: #fff;
+    justify-content: center;
+    padding: 10px;
+    font-size: 16px;
+    bottom: 0;
+}
+
+footer img{
+    margin-right: 15px;
+}
+
+/* ---MEDIA QUERY--- */
+
+@media (min-width: 768px) {
+
+    .card ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+    }
+
+}
