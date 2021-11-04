@@ -65,20 +65,25 @@ header{
     align-items: center;
 }
 
-
-/* ---FORM --- */
-
 .main{
     align-items: center;
     margin: 50px 30px;
 }
 
-.form-cont{
+
+/* ---FORM --- */
+
+.form{
     display: flex;
+    align-content: center;
     justify-content: flex-start;
 }
 
-.form h3{
+.form-cont{
+    width: 50%;
+}
+
+.form-cont h3{
     display: block;
     font-size: 22px;
     line-height: 30px;
@@ -91,19 +96,29 @@ header{
 
 .form input{
     padding: 10px;
-    margin: 15px 0;
 }
 
 
 /* ---FORM-SEARCH --- */
 
-.form-search{
-    width: 50%;
-}
+
 
 /* ---FORM-INSERT --- */
 
+.form-insert{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
 
+.form-insert label{
+    margin: 15px 0;
+}
+
+.input-div{
+    margin-right: 20px;
+}
 
 
 /* ---CARD --- */

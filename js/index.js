@@ -3,7 +3,11 @@
  * Wraps the document.querySelector method.
  */
 
+
+
 const query = (selector) => document.querySelector(selector);
+
+
 
 
 /** 
@@ -11,6 +15,8 @@ const query = (selector) => document.querySelector(selector);
  */
 
 const render = (container, items) => {
+    data.sort((firstElement, secondElement) => (firstElement.name > secondElement.name) ? 1 : -1);
+
     const elements = items.map( (element, index) => {
         return `<li>
         <h3>${element.name}</h3>
@@ -22,10 +28,8 @@ const render = (container, items) => {
     const content = elements.join(' ')
 
     container.innerHTML = content;
+
 }
-
-
-
 
 /** 
  * - Add listener;
@@ -33,8 +37,8 @@ const render = (container, items) => {
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = query("form");
-    const input = query("form input");
+    const form = query(".form-search");
+    const input = query(".form-search input");
     const list = query("ul");
     const inputName = query("#name");
     const inputEmail = query("#email");
@@ -55,22 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
         render(list, result);
     });   
 
-    // const inputNameCapitalize = (value) => {
-    //     const inputLower = inputName.value.split(" ");
-    //     for (let index = 0; index < inputLower.length; index++) {
-    //         inputLower[index] = inputLower[index].charAt(0).toUpperCase() + inputLower[index].slice(1);
-    //     }
-
-        
-    // }
-    // function capitalizeFirstLetter(string) {
-
-    //     return string.charAt(0).toUpperCase() + string.slice(1);
-    //   }
-      
-    // console.log(capitalizeFirstLetter(inputName.value));
-
-
+/** 
+ * Method to add a new contact
+ */
 
     btnInsert.addEventListener( "click", (event) => {
         event.preventDefault();
@@ -83,9 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         data.push(newData);
 
+        
+
         render(list, data);
 
     });
+
+   
       
 
 })
