@@ -66,18 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
     btnInsert.addEventListener( "click", (event) => {
         event.preventDefault();
 
+        // const inputNameCap = inputName.value.split(" ");
+
         const inputNameCap = inputName.value.split(" ");
-        for (let i = 0; i < inputNameCap.length; i++) {
+
+        inputNameCap.forEach( (element, i) => {
             inputNameCap[i] = inputNameCap[i][0].toUpperCase() + inputNameCap[i].substr(1);
-        }
-
-        inputNameCap.join("  ");
-
+        });  
 
 
         const newData = {};
 
-        newData.name = inputNameCap;
+        newData.name =  inputNameCap.join("  ");
         newData.phone = inputPhone.value;
         newData.email = inputEmail.value;
 
